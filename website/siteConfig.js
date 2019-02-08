@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: 'Laravel reCAPTCHA package', // Title for your website.
   tagline: 'A very simply to use package to install Google reCAPTCHA on your Laravel app',
-  url: 'https://laravel-recaptcha.biscolab.com', // Your website URL
+  url: 'https://laravel-recaptcha-docs.biscolab.com', // Your website URL
   cname: 'laravel-recaptcha.biscolab.com',
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
