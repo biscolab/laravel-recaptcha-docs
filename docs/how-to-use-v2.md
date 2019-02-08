@@ -1,7 +1,7 @@
 ---
-id: how-to-use
-title: How to use
-sidebar_label: How to use
+id: how-to-use-v2
+title: How to use v2
+sidebar_label: How to use v2
 ---
 
 
@@ -20,7 +20,7 @@ You can also use `ReCaptcha::htmlScriptTagJsApi($formId)`.
     </head>
 ```
 
-### If you are using ReCAPTCHA v2
+### ReCAPTCHA v2 Checkbox
 After you have to insert `htmlFormSnippet()` helper inside the form where you want to use the field `g-recaptcha-response`.
 
 You can also use `ReCaptcha::htmlFormSnippet()` .
@@ -32,7 +32,7 @@ You can also use `ReCaptcha::htmlFormSnippet()` .
 </form>
 ```
 
-### If you are using ReCAPTCHA INVISIBLE
+### ReCAPTCHA v2 Invisible
 After you have to insert `htmlFormButton($buttonInnerHTML)` helper inside the form where you want to use reCAPTCHA. 
 
 This function creates submit button therefore you don't have to insert `<input type="submit">` or similar.
@@ -40,12 +40,13 @@ This function creates submit button therefore you don't have to insert `<input t
 You can also use `ReCaptcha::htmlFormButton($buttonInnerHTML)` .
 
 `$buttonInnerHTML` is what you want to write on the submit button
-```blade
-<form>
+```html
+<form id="{{ formId }}">
     ...
     {!! htmlFormButton(/* $buttonInnerHTML - Optional */) !!}
 </form>
 ```
+**!!!IMPORTANT!!!** Use as `$formId` the same value you previously set in `htmlScriptTagJsApi` function.
 
 ## Verify submitted data
 

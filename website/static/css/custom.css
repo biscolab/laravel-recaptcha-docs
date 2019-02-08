@@ -1,9 +1,30 @@
 /* your custom css */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: "Open sans", sans-serif;
+    font-size: 14px;
+}
+
+img[src*="#img-thumbnail"] {
+    display: inline-block;
+ }
+
+.docMainWrapper {
+    padding: 0;
+}
+
+.docsNavContainer {
+    border-right: 1px solid #eeeeee;
+}
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
 @media only screen and (min-width: 1024px) {
+    .fixedHeaderContainer {
+        padding: 14px 0;
+    }
 }
 
 @media only screen and (max-width: 1023px) {

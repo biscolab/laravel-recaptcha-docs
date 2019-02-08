@@ -1,7 +1,8 @@
 ---
-id: intro
+id: version-3.3.0-intro
 title: Intro
 sidebar_label: Intro
+original_id: intro
 ---
 
 ## What is reCAPTCHA?
