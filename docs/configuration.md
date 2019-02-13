@@ -10,14 +10,15 @@ Create `config/recaptcha.php` configuration file using the following artisan com
 $ php artisan vendor:publish --provider="Biscolab\ReCaptcha\ReCaptchaServiceProvider"
 ```
 
-## Add your API Keys
+## Set the environment
+### Add your API Keys
 Open `.env` file and set `RECAPTCHA_SITE_KEY` and `RECAPTCHA_SECRET_KEY`:
 ```php
 # in your .env file
 RECAPTCHA_SITE_KEY=YOUR_API_SITE_KEY
 RECAPTCHA_SECRET_KEY=YOUR_API_SECRET_KEY
 ```
-
+### Complete configuration
 Open `config/recaptcha.php` configuration file and set `version`:
 ```php
 return [
@@ -34,13 +35,14 @@ return [
 
 * `version` indicates the reCAPTCHA version (supported: v3|v2|invisible). Get more info about reCAPTCHA version at <a href="https://developers.google.com/recaptcha/docs/versions" target="_blank">https://developers.google.com/recaptcha/docs/versions</a>.
 
-* `skip_ip` is a list of IP addresses that, if recognized, disable the reCAPTCHA validation (return always true).
+* `skip_ip` is a whitelist of IP addresses that, if recognized, disable the reCAPTCHA validation (return always true) and if you embed JS code in blade (view) file **NO validation call will be performed**.
 
 * `default_validation_route` is the route called via javascript built-in validation script (v3 only)
 
 * `default_token_parameter_name` is the name of "token" GET parameter sent to `default_validation_route` to be validated (v3 only)
 
-**!!! IMPORTANT !!!** Every time you change some configuration run the folloeing shell command:
+### Reload config cache file
+> **!!! IMPORTANT !!!** Every time you change some configuration run the following shell command:
 ```sh
 $ php artisan config:cache
 ```

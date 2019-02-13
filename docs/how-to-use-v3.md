@@ -48,10 +48,10 @@ Same will happen with `callback_catch`. `callback_catch` will be called in event
 
 Please, go to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">Using Fetch</a> for further information on `fetch` javascript function.
 
-**Warning!!! Check browser compatibility** 
+> **Warning!!! Check browser compatibility** 
 `fetch` function has compatibility issues with some browser like IE. Please create a custom validation function and set `custom_validation` with its name. That function has to accept as argument the `token`received from Google reCAPTCHA API.
- 
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Browser_compatibility" target="_blank">Fetch browser compatibility</a> 
+>
+> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Browser_compatibility" target="_blank">Fetch browser compatibility</a> 
 
 
 ### Validation Laravel route
@@ -71,8 +71,9 @@ You can also change the validation end-point changing `default_validation_route`
 
 ### Validation response object
 
-The response will be a JSON containing following data:
+The output will be a JSON containing following data:
 
+* **Default output without errors**
 ```json
 {
     "action":"homepage",
@@ -80,6 +81,25 @@ The response will be a JSON containing following data:
     "hostname":"www.yourdomain.ext",
     "score":0.9,
     "success":true
+}
+```
+* **Output when calling IP is included in "skip_ip" config whitelist**
+```json
+{
+    "skip_by_ip":true,
+    "score":0.9,
+    "success":true
+}
+```
+> If you embed code in your blade file using `htmlScriptTagJsApiV3` helper no validation call will be performed!
+>
+> More info at <a href="configuration#complete-configuration">Configuration page</a>
+* **Output with an empty response from Google reCAPTCHA API**
+```json
+{
+    "error":"cURL response empty",
+    "score":0.1,
+    "success":false
 }
 ```
 
