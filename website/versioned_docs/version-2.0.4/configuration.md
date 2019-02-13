@@ -16,7 +16,7 @@ php artisan vendor:publish --provider="Biscolab\ReCaptcha\ReCaptchaServiceProvid
 Open `config/recaptcha.php` configuration file and set `version`:
 ```php
 return [
-    'api_site_key'      => 'YOUR_API_SITE_KEY,
+    'api_site_key'      => 'YOUR_API_SITE_KEY',
     'api_secret_key'    => 'YOUR_API_SECRET_KEY',
     'version'           => 'v2' // supported: v2|invisible 
     'skip_ip'           => [] // array of IP addresses - String: dotted quad format e.g.: 127.0.0.1
