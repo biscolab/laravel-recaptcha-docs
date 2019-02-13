@@ -81,7 +81,7 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ['https://buttons.github.io/buttons.js', 'http://chs03.cookie-script.com/s/5462f0b70af569a29b401589fc180ce6.js'],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
@@ -95,14 +95,13 @@ const siteConfig = {
 	scrollToTop: true,
 
   // Show documentation's last contributor's name.
-  // enableUpdateBy: true,
+  enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
+  enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
 	repoUrl: 'https://github.com/biscolab/laravel-recaptcha',
 
 };
