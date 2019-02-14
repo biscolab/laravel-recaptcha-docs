@@ -46,6 +46,9 @@ class Footer extends React.Component {
             <a href={'https://github.com/biscolab/laravel-recaptcha/issues'} target={'_blank'}>
               Issue tracker
             </a>
+            <a href={'https://github.com/biscolab/laravel-recaptcha/blob/master/LICENSE'} target={'_blank'}>
+              License
+            </a>
           </div>
           <div>
             <h5>More</h5>
