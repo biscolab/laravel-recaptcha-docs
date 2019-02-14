@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Laravel reCAPTCHA package', // Title for your website.
+  title: 'Laravel reCAPTCHA', // Title for your website.
   tagline: 'A very simply to use package to install Google reCAPTCHA on your Laravel app',
   url: 'https://laravel-recaptcha-docs.biscolab.com', // Your website URL
   cname: 'laravel-recaptcha-docs.biscolab.com',
@@ -102,7 +102,11 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-	repoUrl: 'https://github.com/biscolab/laravel-recaptcha',
+  repoUrl: 'https://github.com/biscolab/laravel-recaptcha',
+  
+  gaTrackingId: 'UA-5439279-35',
+
+  gaGtag: true
 
 };
 
