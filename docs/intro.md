@@ -8,6 +8,7 @@ sidebar_label: Intro
 
 [![Build Status](https://travis-ci.org/biscolab/laravel-recaptcha.svg?branch=master#img-thumbnail)](https://travis-ci.org/biscolab/laravel-recaptcha) 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/biscolab/laravel-recaptcha/badges/quality-score.png?b=master#img-thumbnail)](https://scrutinizer-ci.com/g/biscolab/laravel-recaptcha/?branch=master) 
+[![Code Coverage](https://scrutinizer-ci.com/g/biscolab/laravel-recaptcha/badges/coverage.png?b=master#img-thumbnail)](https://scrutinizer-ci.com/g/biscolab/laravel-recaptcha/?branch=master)
 [![Packagist version](https://img.shields.io/packagist/v/biscolab/laravel-recaptcha.svg#img-thumbnail)](https://packagist.org/packages/biscolab/laravel-recaptcha)
 [![MIT License](https://img.shields.io/github/license/biscolab/laravel-recaptcha.svg#img-thumbnail)](https://github.com/biscolab/laravel-recaptcha/blob/master/LICENSE)
 

@@ -49,6 +49,9 @@ class Footer extends React.Component {
             <a href={'https://github.com/biscolab/laravel-recaptcha/blob/master/LICENSE'} target={'_blank'}>
               License
             </a>
+            <a href={'https://packagist.org/packages/biscolab/laravel-recaptcha'} target={'_blank'}>
+              Packagist
+            </a>
           </div>
           <div>
             <h5>More</h5>
@@ -56,7 +59,11 @@ class Footer extends React.Component {
           </div>
         </section>
 
-        <section className="copyright">{this.props.config.copyright}</section>
+        <section className="copyright">
+          <a href={this.props.config.copyrightUrl} target={"_blank"}>
+            {this.props.config.copyright}
+          </a>
+        </section>
       </footer>
     );
   }
