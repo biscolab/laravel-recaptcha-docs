@@ -54,8 +54,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#2E8555',
-    secondaryColor: '#205C3B',
+    primaryColor: '#218ae1',
+    secondaryColor: '#96cbec',
   },
 
   /* Custom fonts for website */
@@ -73,7 +73,8 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-	copyright: "Copyright © " + new Date().getFullYear() + " Roberto Belotti",
+  copyright: "Copyright © " + new Date().getFullYear() + " Roberto Belotti",
+  copyrightUrl: "https://robertobelotti.com",
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

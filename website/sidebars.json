@@ -6,6 +6,10 @@
       "configuration",
       "how-to-use-v2",
       "how-to-use-v3"
+    ],
+    "Contribute": [
+      "testing",
+      "code-of-conduct"
     ]
   }
 }
