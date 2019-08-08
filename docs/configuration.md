@@ -31,7 +31,9 @@ return [
     // @since v3.2.0
     'default_validation_route' => env('RECAPTCHA_DEFAULT_VALIDATION_ROUTE', 'biscolab-recaptcha/validate'),
     // @since v3.2.0
-    'default_token_parameter_name' => env('RECAPTCHA_DEFAULT_TOKEN_PARAMETER_NAME', 'token')
+    'default_token_parameter_name' => env('RECAPTCHA_DEFAULT_TOKEN_PARAMETER_NAME', 'token'),
+    // @since v3.6.0
+    'default_language'             => env('RECAPTCHA_DEFAULT_LANGUAGE', null)
 ];
 ```
 
@@ -46,6 +48,8 @@ return [
 * `default_validation_route` is the route called via javascript built-in validation script (v3 only)
 
 * `default_token_parameter_name` is the name of "token" GET parameter sent to `default_validation_route` to be validated (v3 only)
+
+* `default_language` is the default language code. It has no effect with v3. See [https://developers.google.com/recaptcha/docs/language](https://developers.google.com/recaptcha/docs/language) for further information
 
 ### Reload config cache file
 > **!!! IMPORTANT !!!** Every time you change some configuration run the following shell command:
