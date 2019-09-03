@@ -1,0 +1,15 @@
+{
+  "version-3.6.1-docs": {
+    "Getting Started": [
+      "version-3.6.1-intro",
+      "version-3.6.1-installation",
+      "version-3.6.1-configuration",
+      "version-3.6.1-how-to-use-v2",
+      "version-3.6.1-how-to-use-v3"
+    ],
+    "Contribute": [
+      "version-3.6.1-code-of-conduct",
+      "version-3.6.1-testing"
+    ]
+  }
+}

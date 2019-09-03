@@ -1,0 +1,39 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js --v
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.16.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EPERM: operation not permitted, rmdir '/var/www/html/github/laravel-recaptcha-docs/website/node_modules/docusaurus/lib/pages/en'
+
+npm manifest: 
+  {
+    "scripts": {
+      "examples": "docusaurus-examples",
+      "start": "docusaurus-start",
+      "build": "docusaurus-build",
+      "publish-gh-pages": "docusaurus-publish",
+      "write-translations": "docusaurus-write-translations",
+      "version": "docusaurus-version",
+      "rename-version": "docusaurus-rename-version"
+    },
+    "devDependencies": {
+      "docusaurus": "^1.12.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
