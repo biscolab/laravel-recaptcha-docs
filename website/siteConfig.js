@@ -54,7 +54,7 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#218ae1',
+    primaryColor: '#383d4c',
     secondaryColor: '#96cbec',
   },
 
@@ -90,8 +90,8 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-	ogImage: 'img/biscolab_white.png',
-	twitterImage: 'img/biscolab_white.png',
+	ogImage: 'img/avatar_500x500.jpg',
+	twitterImage: 'img/avatar_500x500.jpg',
 
 	scrollToTop: true,
 
@@ -105,9 +105,9 @@ const siteConfig = {
   // template. For example, if you need your repo's URL...
   repoUrl: 'https://github.com/biscolab/laravel-recaptcha',
   
-  gaTrackingId: 'UA-5439279-35',
+  // gaTrackingId: 'UA-5439279-35',
 
-  gaGtag: true
+  // gaGtag: true
 
 };
 

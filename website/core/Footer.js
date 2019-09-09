@@ -40,11 +40,17 @@ class Footer extends React.Component {
             <a href={this.docUrl('intro')}>
               Getting Started
             </a>
+            <a href="/versions">
+              Versions
+            </a>
           </div>
           <div>
             <h5>Community</h5>
             <a href={'https://github.com/biscolab/laravel-recaptcha/issues'} target={'_blank'}>
               Issue tracker
+            </a>
+            <a href={this.docUrl('contributing')} target={'_blank'}>
+              Contributing
             </a>
             <a href={'https://github.com/biscolab/laravel-recaptcha/blob/master/LICENSE'} target={'_blank'}>
               License
@@ -56,13 +62,17 @@ class Footer extends React.Component {
           <div>
             <h5>More</h5>
             <a className="github-button" href={this.props.config.repoUrl} aria-label="Star biscolab/laravel-recaptcha on GitHub">Github</a>
+            <a href={'https://www.google.com/recaptcha'} target={'_blank'}>
+              Official page
+            </a>
           </div>
         </section>
 
         <section className="copyright">
-          <a href={this.props.config.copyrightUrl} target={"_blank"}>
-            {this.props.config.copyright}
-          </a>
+          <a href={'https://www.google.com/recaptcha'} target={'_blank'}>reCAPTCHA is property of Google Inc.</a><br/>
+          {this.props.config.title} is distributable under the terms of the <a href="https://github.com/biscolab/laravel-recaptcha/blob/master/LICENSE" target={"_blank"}>MIT license</a><br/>
+          {this.props.config.title} is a project of <a href={this.props.config.copyrightUrl} target={"_blank"}>Roberto Belotti</a>
+      
         </section>
       </footer>
     );

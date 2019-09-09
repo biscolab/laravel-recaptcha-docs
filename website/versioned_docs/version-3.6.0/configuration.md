@@ -18,7 +18,7 @@ Open `.env` file and set `RECAPTCHA_SITE_KEY` and `RECAPTCHA_SECRET_KEY`:
 # in your .env file
 RECAPTCHA_SITE_KEY=YOUR_API_SITE_KEY
 RECAPTCHA_SECRET_KEY=YOUR_API_SECRET_KEY
-# RECAPTCHA_VERSION
+# RECAPTCHA_DEFAULT_VERSION
 # RECAPTCHA_CURL_TIMEOUT
 # RECAPTCHA_DEFAULT_VALIDATION_ROUTE
 # RECAPTCHA_DEFAULT_TOKEN_PARAMETER_NAME
@@ -30,7 +30,8 @@ Open `config/recaptcha.php` configuration file and set `version`:
 return [
     'api_site_key'      => env('RECAPTCHA_SITE_KEY', ''),
     'api_secret_key'    => env('RECAPTCHA_SECRET_KEY', ''),
-    'version'           => env('RECAPTCHA_VERSION', 'v2'), // supported: v3|v2|invisible 
+    // Errata corrige: is RECAPTCHA_DEFAULT_VERSION, was RECAPTCHA_VERSION
+    'version'           => env('RECAPTCHA_DEFAULT_VERSION', 'v2'), // supported: v3|v2|invisible 
     // @since v3.4.3
     'curl_timeout'      => env('RECAPTCHA_CURL_TIMEOUT', 10),
     'skip_ip'           => [], // array of IP addresses - String: dotted quad format e.g.: 127.0.0.1

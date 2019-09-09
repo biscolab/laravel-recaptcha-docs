@@ -1,7 +1,8 @@
 ---
-id: how-to-use-v3
+id: version-4.0.0-how-to-use-v3
 title: How to use v3
 sidebar_label: How to use v3
+original_id: how-to-use-v3
 ---
 
 

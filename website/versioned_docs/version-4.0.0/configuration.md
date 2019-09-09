@@ -1,7 +1,8 @@
 ---
-id: configuration
+id: version-4.0.0-configuration
 title: Configuration
 sidebar_label: Configuration
+original_id: configuration
 ---
 
 ## Publish package

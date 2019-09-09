@@ -1,0 +1,16 @@
+{
+  "version-4.0.0-docs": {
+    "Getting Started": [
+      "version-4.0.0-intro",
+      "version-4.0.0-whats-new",
+      "version-4.0.0-installation",
+      "version-4.0.0-configuration",
+      "version-4.0.0-how-to-use-v2",
+      "version-4.0.0-how-to-use-v3"
+    ],
+    "Contribute": [
+      "version-4.0.0-code-of-conduct",
+      "version-4.0.0-contributing"
+    ]
+  }
+}

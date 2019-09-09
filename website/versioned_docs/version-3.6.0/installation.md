@@ -13,6 +13,7 @@ original_id: installation
 | 2.x             | v2 Invisible, v2 Checkbox | 5.5.9, 7.0 or greater | 5.0 or greater |
 
 Are you still using PHP 5.x or 7.0? Please go to <a href="/docs/2.0.4/installation">v2</a>
+> Latest version is Laravel 6 ready
 
 ## Composer
 

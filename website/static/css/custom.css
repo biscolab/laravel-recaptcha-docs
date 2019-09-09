@@ -14,12 +14,68 @@ img[src*="#img-thumbnail"] {
     display: inline-block;
  }
 
+ a {
+    color: #749db7;
+ }
+
+ .nav-footer .copyright {
+    background-color: #434858;
+    font-size: 12px;
+    padding: 2em 0;
+ }
+
+ .copyright a {
+     color: rgba(255, 255, 255, 0.9);
+ }
+
 .docMainWrapper {
-    padding: 0;
+    min-width: 100%;
+}
+
+.fixedHeaderContainer header h3,
+.navigationSlider .slidingNav ul li.siteNavGroupActive a {
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    background-color: #555d77;
 }
 
 .docsNavContainer {
-    border-right: 1px solid #eeeeee;
+    border-right: 1px solid #6b6f7c;
+    background-color: #555d77;
+}
+
+.nav-footer {
+    background-color: #383d4c;
+    padding-bottom: 0;
+}
+
+.toc .toggleNav ul {
+    padding: 0;
+}
+
+.toc .toggleNav ul li a {
+    color: #ffffff;
+    padding: 6px 10px;
+}
+.toc .toggleNav ul li a:hover {
+    color: #ddf7ff;
+    text-indent: 5px;
+    background-color: #6b728a;
+}
+
+.toc .toggleNav ul li.navListItemActive a {
+    text-indent: 5px;
+    color: #ddf7ff;
+    background-color: #6b728a;    
+}
+.toc .toggleNav .navGroup .navGroupCategoryTitle {
+    color: #ffffff;
+    padding: 6px 10px;
+}
+
+.navListItem.navListItemActive {
+    border-left: 3px solid #ddf7ff;
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
@@ -28,6 +84,13 @@ img[src*="#img-thumbnail"] {
 @media only screen and (min-width: 1024px) {
     .fixedHeaderContainer {
         padding: 14px 0;
+        box-shadow: 0px 0px 8px #444;
+    }
+    .docMainWrapper {
+        padding: 0;
+    }
+    .docsNavContainer {
+        /* padding: 0 10px; */
     }
 }
 
