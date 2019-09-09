@@ -105,9 +105,9 @@ const siteConfig = {
   // template. For example, if you need your repo's URL...
   repoUrl: 'https://github.com/biscolab/laravel-recaptcha',
   
-  // gaTrackingId: 'UA-5439279-35',
+  gaTrackingId: 'UA-5439279-35',
 
-  // gaGtag: true
+  gaGtag: true
 
 };
 
