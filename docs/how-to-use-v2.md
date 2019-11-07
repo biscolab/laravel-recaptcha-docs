@@ -31,7 +31,7 @@ You can also use `ReCaptcha::htmlScriptTagJsApi()`.
 #### htmlScriptTagJsApi($configuration)
 `$configuration` argument can have following keys:
 
-* `lang` set reCAPTCHA language. This will override `default_language` in `config/recaptcha.php`. Here you ca find the complete list of availeble languages [https://developers.google.com/recaptcha/docs/language](https://developers.google.com/recaptcha/docs/language)
+* `lang` set reCAPTCHA language. This will override `default_language` in `config/recaptcha.php`. Here you can find the complete list of available languages [https://developers.google.com/recaptcha/docs/language](https://developers.google.com/recaptcha/docs/language)
 
 #### Form set-up
 After you have to insert `htmlFormSnippet()` helper inside the form where you want to use the field `g-recaptcha-response`.
