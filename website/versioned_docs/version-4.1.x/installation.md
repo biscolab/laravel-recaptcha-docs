@@ -1,7 +1,8 @@
 ---
-id: installation
+id: version-4.1.x-installation
 title: Installation
 sidebar_label: Installation
+original_id: installation
 ---
 
 ## System requirements
