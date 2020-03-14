@@ -82,7 +82,15 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js', 'http://chs03.cookie-script.com/s/5462f0b70af569a29b401589fc180ce6.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js', 
+    'http://chs03.cookie-script.com/s/5462f0b70af569a29b401589fc180ce6.js',
+    {
+      src:'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      'data-ad-client': 'ca-pub-5617748205146757',
+      async: true,
+    }
+  ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
