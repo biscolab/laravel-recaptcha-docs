@@ -1,7 +1,8 @@
 ---
-id: intro
+id: version-4.2.x-intro
 title: Intro
 sidebar_label: Intro
+original_id: intro
 ---
 
 **Laravel ReCAPTCHA** is a very simply-to-use Laravel 5 package to embed Google reCAPTCHA in your application.
