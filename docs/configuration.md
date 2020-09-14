@@ -110,6 +110,8 @@ $ php artisan config:cache
 
 If you are migrating from an older version check your `config/recaptcha.php` configuration file and compare it with <a href="https://github.com/biscolab/laravel-recaptcha/blob/master/config/recaptcha.php" target="_blank">https://github.com/biscolab/laravel-recaptcha/blob/master/config/recaptcha.php</a>.
 
+> Make sure `config/recaptcha.php` is updated
+
 ## Customize error message
 
 Just for v2 and invisible users.
