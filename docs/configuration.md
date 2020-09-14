@@ -5,29 +5,38 @@ sidebar_label: Configuration
 ---
 
 ## Publish package
+
 Create `config/recaptcha.php` configuration file using the following artisan command:
+
 ```sh
 $ php artisan vendor:publish --provider="Biscolab\ReCaptcha\ReCaptchaServiceProvider"
 ```
 
 ## Set the environment
+
 ### Add your API Keys
+
 Open `.env` file and set `RECAPTCHA_SITE_KEY` and `RECAPTCHA_SECRET_KEY`:
+
 ```php
 # in your .env file
 RECAPTCHA_SITE_KEY=YOUR_API_SITE_KEY
 RECAPTCHA_SECRET_KEY=YOUR_API_SECRET_KEY
 ```
+
 > **The following environment variables have been removed!!!**
 > Now only sensitive informations as API keys are allowed as environment variables, that means you have to set configuration values in `config/recaptcha.php`
-* ~~RECAPTCHA_DEFAULT_VERSION~~
-* ~~RECAPTCHA_CURL_TIMEOUT~~
-* ~~RECAPTCHA_DEFAULT_VALIDATION_ROUTE~~
-* ~~RECAPTCHA_DEFAULT_TOKEN_PARAMETER_NAME~~
-* ~~RECAPTCHA_DEFAULT_LANGUAGE~~
+
+- ~~RECAPTCHA_DEFAULT_VERSION~~
+- ~~RECAPTCHA_CURL_TIMEOUT~~
+- ~~RECAPTCHA_DEFAULT_VALIDATION_ROUTE~~
+- ~~RECAPTCHA_DEFAULT_TOKEN_PARAMETER_NAME~~
+- ~~RECAPTCHA_DEFAULT_LANGUAGE~~
 
 ### Complete configuration
+
 Open `config/recaptcha.php` configuration file and set `version`:
+
 ```php
 return [
     'api_site_key'                  => env('RECAPTCHA_SITE_KEY', ''),
@@ -41,12 +50,14 @@ return [
     'default_validation_route'      => 'biscolab-recaptcha/validate',
     // @since v3.2.0 changed in v4.0.0
     'default_token_parameter_name' => 'token',
-    // @since v3.6.0 changed in v4.0.0 
+    // @since v3.6.0 changed in v4.0.0
     'default_language'             => null,
     // @since v4.0.0
     'default_form_id'              => 'biscolab-recaptcha-invisible-form', // Only for "invisible" reCAPTCHA
     // @since v4.0.0
     'explicit'                     => false, // true|false
+    // @since v4.3.0
+    'api_domain'                   => false, // default value is "www.google.com"
     // @since v4.0.0
     'tag_attributes'               => [
         'theme'                    => 'light', // "light"|"dark"
@@ -58,44 +69,53 @@ return [
     ]
 ];
 ```
-| Key               | Type | Description                                                                                                                                                           | Default |
-|-------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| `api_site_key` and `api_secret_key` | `string` | reCAPTCHA keys you have to create in order to perform Google API authentication. For more information about Site Key and Secret Key please visit [Google reCAPTCHA developer documentation](https://developers.google.com/recaptcha/docs/start) | `''` |
-| `version` | `string` | indicates the reCAPTCHA version (supported: v3&#124;v2&#124;invisible). Get more info about reCAPTCHA version at <a href="https://developers.google.com/recaptcha/docs/versions" target="_blank">https://developers.google.com/recaptcha/docs/versions</a> | `'v2'` |
-| `curl_timeout` | `int` |  the maximum number of seconds to allow cURL functions to execute | `10` |
-| `skip_ip` | `array` &#124; `string` | a whitelist of IP addresses (array or CSV) that, if recognized, disable the reCAPTCHA validation (return always true) and if you embed JS code in blade (view) file **NO validation call will be performed** | `[]` |
-| `default_validation_route` | `string` | the route called via javascript built-in validation script (v3 only) | `'biscolab-recaptcha/validate'` |
-| `default_token_parameter_name` | `string` | the name of "token" GET parameter sent to `default_validation_route` to be validated (v3 only) | `'token'` |
-| `default_language` | `string` | the default language code. It has no effect with v3. See [https://developers.google.com/recaptcha/docs/language](https://developers.google.com/recaptcha/docs/language) for further information | `null` |
-| `default_form_id` | `string` | the default form ID. Only for "invisible" reCAPTCHA | `'biscolab-recaptcha-invisible-form'` |
-| `explicit` | `bool` | deferring the render can be achieved by specifying your onload callback function and adding parameters to the JavaScript resource. It has no effect with v3 and invisible (supported values: true&#124;false) | `false` |
+
+| Key                                 | Type                    | Description                                                                                                                                                                                                                                                  | Default                               |
+| ----------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
+| `api_site_key` and `api_secret_key` | `string`                | reCAPTCHA keys you have to create in order to perform Google API authentication. For more information about Site Key and Secret Key please visit [Google reCAPTCHA developer documentation](https://developers.google.com/recaptcha/docs/start)              | `''`                                  |
+| `version`                           | `string`                | indicates the reCAPTCHA version (supported: v3&#124;v2&#124;invisible). Get more info about reCAPTCHA version at <a href="https://developers.google.com/recaptcha/docs/versions" target="_blank">https://developers.google.com/recaptcha/docs/versions</a>   | `'v2'`                                |
+| `curl_timeout`                      | `int`                   | the maximum number of seconds to allow cURL functions to execute                                                                                                                                                                                             | `10`                                  |
+| `skip_ip`                           | `array` &#124; `string` | a whitelist of IP addresses (array or CSV) that, if recognized, disable the reCAPTCHA validation (return always true) and if you embed JS code in blade (view) file **NO validation call will be performed**                                                 | `[]`                                  |
+| `default_validation_route`          | `string`                | the route called via javascript built-in validation script (v3 only)                                                                                                                                                                                         | `'biscolab-recaptcha/validate'`       |
+| `default_token_parameter_name`      | `string`                | the name of "token" GET parameter sent to `default_validation_route` to be validated (v3 only)                                                                                                                                                               | `'token'`                             |
+| `default_language`                  | `string`                | the default language code. It has no effect with v3. See [https://developers.google.com/recaptcha/docs/language](https://developers.google.com/recaptcha/docs/language) for further information                                                              | `null`                                |
+| `default_form_id`                   | `string`                | the default form ID. Only for "invisible" reCAPTCHA                                                                                                                                                                                                          | `'biscolab-recaptcha-invisible-form'` |
+| `explicit`                          | `bool`                  | deferring the render can be achieved by specifying your onload callback function and adding parameters to the JavaScript resource. It has no effect with v3 and invisible (supported values: true&#124;false)                                                | `false`                               |
+| `api_domain`                        | `string`                | customize API domain. Default value is `www.google.com`, but, if not accessible you ca set that value to `www.recaptcha.net`. More info about [Can I use reCAPTCHA globally?](https://developers.google.com/recaptcha/docs/faq#can-i-use-recaptcha-globally) | `www.google.com`                      |
 
 #### (array) tag_attributes
 
-| Key               | Type | Description                                                                                                                                                           | Default |
-|-------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| `tag_attributes.theme` | `string` | the color theme of the widget. (supported values: "light"&#124;"dark") | `'light'` |
-| `tag_attributes.size` | `string` |  the size of the widget. (supported values: "normal"&#124;"compact") | `'normal'` |
-| `tag_attributes.tabindex` | `int` |  the tabindex of the widget and challenge | `0` |
-| `tag_attributes.callback` | `string` |  the name of your callback function, executed when the user submits a successful response. The g-recaptcha-response token is passed to your callback | `null` |
-| `tag_attributes.expired-callback` | `string` |  the name of your callback function, executed when the reCAPTCHA response expires and the user needs to re-verify  | `null` |
-| `tag_attributes.error-callback` | `string` |  the name of your callback function, executed when reCAPTCHA encounters an error (usually network connectivity) and cannot continue until connectivity is restored. If you specify a function here, you are responsible for informing the user that they should retry  | `null` |
+| Key                               | Type     | Description                                                                                                                                                                                                                                                          | Default    |
+| --------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `tag_attributes.theme`            | `string` | the color theme of the widget. (supported values: "light"&#124;"dark")                                                                                                                                                                                               | `'light'`  |
+| `tag_attributes.size`             | `string` | the size of the widget. (supported values: "normal"&#124;"compact")                                                                                                                                                                                                  | `'normal'` |
+| `tag_attributes.tabindex`         | `int`    | the tabindex of the widget and challenge                                                                                                                                                                                                                             | `0`        |
+| `tag_attributes.callback`         | `string` | the name of your callback function, executed when the user submits a successful response. The g-recaptcha-response token is passed to your callback                                                                                                                  | `null`     |
+| `tag_attributes.expired-callback` | `string` | the name of your callback function, executed when the reCAPTCHA response expires and the user needs to re-verify                                                                                                                                                     | `null`     |
+| `tag_attributes.error-callback`   | `string` | the name of your callback function, executed when reCAPTCHA encounters an error (usually network connectivity) and cannot continue until connectivity is restored. If you specify a function here, you are responsible for informing the user that they should retry | `null`     |
+
+> DO NOT SET `tag_attributes.callback`, `tag_attributes.expired-callback`, `tag_attributes.error-callback` to `biscolabOnloadCallback`. `biscolabOnloadCallback` is the default JavaScript callback function called when **explicit** is set to `true` and widget `onload` event is fired.
 
 Here you can find further details about `tag_attributes.*` [https://developers.google.com/recaptcha/docs/display#render_param](https://developers.google.com/recaptcha/docs/display#render_param)
 
 ### Reload config cache file
+
 > **!!! IMPORTANT !!!** Every time you change some configuration run the following shell command:
+
 ```sh
 $ php artisan config:cache
 ```
 
 ## Have you updated?
+
 If you are migrating from an older version check your `config/recaptcha.php` configuration file and compare it with <a href="https://github.com/biscolab/laravel-recaptcha/blob/master/config/recaptcha.php" target="_blank">https://github.com/biscolab/laravel-recaptcha/blob/master/config/recaptcha.php</a>.
 
 ## Customize error message
+
 Just for v2 and invisible users.
 
 Before starting please add the validation message to `resources/lang/[LANG]/validation.php` file
+
 ```php
 return [
     ...

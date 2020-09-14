@@ -6,13 +6,13 @@ sidebar_label: Installation
 
 ## System requirements
 
-| Package version | reCaptcha version             | PHP version           | Laravel version         | Docs                                          |
-| --------------- | ----------------------------- | --------------------- | ----------------------- | --------------------------------------------- |
-| 4.2.x           | v3, v2 Invisible, v2 Checkbox | 7.1 or greater        | 5.5 or greater, 6, 7, 8 | <a href="/docs/installation">Latest</a>       |
-| 4.1.x           | v3, v2 Invisible, v2 Checkbox | 7.1 or greater        | 5.5 or greater, 6, 7    | <a href="/docs/4.1.x/installation">4.1.x</a>  |
-| 4.0.x           | v3, v2 Invisible, v2 Checkbox | 7.1 or greater        | 5.5 or greater, 6       | <a href="/docs/4.0.x/installation">4.0.x</a>  |
-| 3.x             | v3, v2 Invisible, v2 Checkbox | 7.1 or greater        | 5.5 or greater, 6 (\*)  | <a href="/docs/3.6.1/installation">v3.6.1</a> |
-| 2.x             | v2 Invisible, v2 Checkbox     | 5.5.9, 7.0 or greater | 5.0 or greater          | <a href="/docs/2.0.4/installation">v2.0.4</a> |
+| Package version  | reCaptcha version             | PHP version           | Laravel version         | Docs                                          |
+| ---------------- | ----------------------------- | --------------------- | ----------------------- | --------------------------------------------- |
+| 4.2.x or greater | v3, v2 Invisible, v2 Checkbox | 7.1 or greater        | 5.5 or greater, 6, 7, 8 | <a href="/docs/installation">Latest</a>       |
+| 4.1.x            | v3, v2 Invisible, v2 Checkbox | 7.1 or greater        | 5.5 or greater, 6, 7    | <a href="/docs/4.1.x/installation">4.1.x</a>  |
+| 4.0.x            | v3, v2 Invisible, v2 Checkbox | 7.1 or greater        | 5.5 or greater, 6       | <a href="/docs/4.0.x/installation">4.0.x</a>  |
+| 3.x              | v3, v2 Invisible, v2 Checkbox | 7.1 or greater        | 5.5 or greater, 6 (\*)  | <a href="/docs/3.6.1/installation">v3.6.1</a> |
+| 2.x              | v2 Invisible, v2 Checkbox     | 5.5.9, 7.0 or greater | 5.0 or greater          | <a href="/docs/2.0.4/installation">v2.0.4</a> |
 
 > (\*) Version 3.6.1 is Laravel 6 ready
 

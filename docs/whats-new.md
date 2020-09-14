@@ -27,6 +27,7 @@ You can override the default widget language passing the proper configuration at
     'lang' => 'it'
 ]) !!}
 ```
+
 See [https://developers.google.com/recaptcha/docs/language](https://developers.google.com/recaptcha/docs/language) for the list of available languages
 
 ### v2 invisible default form ID
@@ -39,6 +40,7 @@ You can also override the default value passing the proper configuration attribu
     'form_id' => 'my-custom-form-id'
 ]) !!}
 ```
+
 > Overriding default form ID `getFormId()` helper will return `'my-custom-form-id'`.
 
 ## New functions
@@ -48,16 +50,15 @@ You can also override the default value passing the proper configuration attribu
 `getFormId()` returns the `form` ID property using **invisible** reCAPTCHA. To set value take a look [here](#v2-invisible-default-form-id).
 
 Use this helper in blade files
+
 ```html
-<form id="{{getFormId()}}">
-    ...
-</form>
+<form id="{{getFormId()}}">...</form>
 ```
 
 ### `recaptchaRuleName()` and `recaptchaFieldName()` helpers
 
-* `recaptchaRuleName()` returns the default validation rule name
-* `recaptchaFieldName()` returns the default form field name (server side will be the request input name)
+- `recaptchaRuleName()` returns the default validation rule name
+- `recaptchaFieldName()` returns the default form field name (server side will be the request input name)
 
 You can use them together:
 
@@ -66,6 +67,10 @@ $valid = Validator::make(request()->all(), [
             recaptchaFieldName() => recaptchaRuleName()
         ]);
 ```
+
+### Costumizable `api_domain`
+
+Since v4.3.0 you can customize API domain setting `api_domain` in `recaptcha.php` config file. Default value is `www.google.com`, but, when "www.google.com" is not accessible you can change that value to `www.recaptcha.net`
 
 ## Backward incompatible changes
 
@@ -80,8 +85,9 @@ $valid = Validator::make(request()->all(), [
 ### Environment variables removed
 
 Following environment variables have been removed:
-* RECAPTCHA_DEFAULT_VERSION
-* RECAPTCHA_CURL_TIMEOUT
-* RECAPTCHA_DEFAULT_VALIDATION_ROUTE
-* RECAPTCHA_DEFAULT_TOKEN_PARAMETER_NAME
-* RECAPTCHA_DEFAULT_LANGUAGE
+
+- RECAPTCHA_DEFAULT_VERSION
+- RECAPTCHA_CURL_TIMEOUT
+- RECAPTCHA_DEFAULT_VALIDATION_ROUTE
+- RECAPTCHA_DEFAULT_TOKEN_PARAMETER_NAME
+- RECAPTCHA_DEFAULT_LANGUAGE
