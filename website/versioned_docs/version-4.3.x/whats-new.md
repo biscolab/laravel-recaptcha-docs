@@ -1,7 +1,8 @@
 ---
-id: whats-new
+id: version-4.3.x-whats-new
 title: What's new in v4.x?
 sidebar_label: What's new?
+original_id: whats-new
 ---
 
 ## New features
@@ -43,26 +44,6 @@ You can also override the default value passing the proper configuration attribu
 
 > Overriding default form ID `getFormId()` helper will return `'my-custom-form-id'`.
 
-### Costumizable `api_domain`
-
-Since v4.3.0 you can customize API domain setting `api_domain` in `recaptcha.php` config file. Default value is `www.google.com`, but, when "www.google.com" is not accessible you can change that value to `www.recaptcha.net`
-
-### Override `data-` attributes in `ReCaptchaBuilderV2::htmlFormSnippet`
-
-Since v4.4.0 you can override default config data attributes passing customized values to either `ReCaptchaBuilderV2::htmlFormSnippet` method or `htmlFormSnippet` helper.
-
-```php
-{!! htmlFormSnippet([
-    "theme" => "theme",
-    "size" => "size",
-    "tabindex" => "tabindex",
-    "callback" => "callback",
-    "expired-callback" => "expired-callback",
-    "error-callback" => "error-callback",
-    "not-allowed-attribute" => "error",
-]) !!}
-```
-
 ## New functions
 
 ### `getFormId()` helper and method
@@ -87,6 +68,10 @@ $valid = Validator::make(request()->all(), [
             recaptchaFieldName() => recaptchaRuleName()
         ]);
 ```
+
+### Costumizable `api_domain`
+
+Since v4.3.0 you can customize API domain setting `api_domain` in `recaptcha.php` config file. Default value is `www.google.com`, but, when "www.google.com" is not accessible you can change that value to `www.recaptcha.net`
 
 ## Backward incompatible changes
 

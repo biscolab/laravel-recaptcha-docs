@@ -1,7 +1,8 @@
 ---
-id: whats-new
+id: version-4.4.x-whats-new
 title: What's new in v4.x?
 sidebar_label: What's new?
+original_id: whats-new
 ---
 
 ## New features

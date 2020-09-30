@@ -1,7 +1,8 @@
 ---
-id: how-to-use-v2
+id: version-4.4.x-how-to-use-v2
 title: How to use v2
 sidebar_label: How to use v2
+original_id: how-to-use-v2
 ---
 
 ## Embed in Blade
